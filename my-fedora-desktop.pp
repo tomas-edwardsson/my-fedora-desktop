@@ -21,4 +21,8 @@ include remote
 include programming
 include watewasdo
 include finance
+include virtualization
+include bootdisk
+include fedorapkgr
+
 
