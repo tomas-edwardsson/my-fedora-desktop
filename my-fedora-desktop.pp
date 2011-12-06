@@ -1,5 +1,5 @@
 
-$cups_poll_servers = []
+$cups_poll_servers = ['cups.ok.is']
 
 if ($cups_poll_servers) {
         include cups
