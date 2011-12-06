@@ -29,4 +29,5 @@ class repos {
 
 	# Find a closeby mirror
 	package { "yum-plugin-fastestmirror": ensure => installed }
+	package { "yum-plugin-downloadonly": ensure => installed }
 }
