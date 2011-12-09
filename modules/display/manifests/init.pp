@@ -12,6 +12,10 @@ class display::nvidia {
 		subscribe => Exec['install-rpmfusion-nonfree'], 
 		notify => Exec['nvidia-xconfig'],
 	}
+	package { "kmod-nvidia":
+		ensure => installed, 
+		subscribe => Exec['install-rpmfusion-nonfree'], 
+	}
 
 	# Modify the xorg.conf
 	exec { "nvidia-xconfig":
