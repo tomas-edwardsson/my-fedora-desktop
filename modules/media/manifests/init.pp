@@ -7,4 +7,5 @@ class media {
 
 class media::videoediting {
 	package { "openshot": ensure => installed }
+	package { "abcde": ensure => installed }
 }
