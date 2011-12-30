@@ -4,6 +4,11 @@ class programming {
 	include programming::git
 	include programming::python
 	include programming::c
+	include programming::misc
+}
+
+class programming::misc {
+	package { "fuse-devel": ensure => installed }
 }
 
 class programming::git {
