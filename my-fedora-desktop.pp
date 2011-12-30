@@ -4,12 +4,25 @@ $cups_poll_servers = ['cups.ok.is']
 if ($cups_poll_servers) {
         include cups
 }
+# Just installs the autofs package, for me I want the /net/<hostname> for nfs
 include autofs
+
+# Install various repos
 include repos
+
+# I use NVidia cards
 include display::nvidia
+
+# Chat programs, xchat, pidgin
 include chat
+
+# Add some bluetooth capability, specifically for sending and receiving files
 include bluetooth
+
+# Video players and codecs
 include video
+
+
 include configmanagement
 include debugutils
 include media
