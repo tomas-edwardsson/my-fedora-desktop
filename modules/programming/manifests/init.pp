@@ -5,6 +5,7 @@ class programming {
 	include programming::python
 	include programming::c
 	include programming::misc
+	include programming::flickr
 }
 
 class programming::misc {
@@ -24,4 +25,8 @@ class programming::python {
 
 class programming::c {
 	package { "gcc": ensure => installed }
+}
+
+class programming::flickr {
+	package { "flickcurl": ensure => installed }
 }
