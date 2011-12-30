@@ -28,6 +28,7 @@ class programming::c {
 }
 
 class programming::flickr {
+	package { "glib2-devel": ensure => installed }
 	package { "flickcurl": ensure => installed }
 	package { "flickcurl-devel": ensure => installed }
 }
