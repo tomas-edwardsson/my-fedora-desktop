@@ -25,7 +25,10 @@ include video
 
 include configmanagement
 include debugutils
+
+# Video/Photo management stuff
 include media
+
 include diskutils
 include gnome3
 include flash
