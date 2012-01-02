@@ -3,6 +3,11 @@
 class media {
 	include media::videoediting
 	include media::audiorip
+	include media::photo::misc
+}
+
+class media::photo::misc {
+	package { "exiftags": ensure => installed }
 }
 
 class media::audiorip {
