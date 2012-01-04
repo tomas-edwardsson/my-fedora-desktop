@@ -3,7 +3,12 @@
 class media {
 	include media::videoediting
 	include media::audiorip
+	include media::screencapture
 	include media::photo::misc
+}
+
+class media::screencapture {
+	package { "gtk-recordmydesktop": ensure => installed }
 }
 
 class media::photo::misc {
