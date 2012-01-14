@@ -6,6 +6,11 @@ class programming {
 	include programming::c
 	include programming::misc
 	include programming::flickr
+	include programming::rpmbuild
+}
+
+class programming::rpmbuild {
+	package { "tito": ensure => installed }
 }
 
 class programming::misc {
