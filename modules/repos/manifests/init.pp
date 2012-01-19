@@ -18,6 +18,7 @@ class repos {
 	augeas{"atrpms-decss-only" :
   		context => "/files/etc/yum.repos.d/atrpms.repo/atrpms",
   		changes => ["set includepkgs libdvdcss*", "set metadata_expire 7d" ],
+		onlyif => ["get includepkgs != libdvdcss*", "get metadata_expire != 7d" ],
 		subscribe => Exec['install-atrpms'],
 	}
 
