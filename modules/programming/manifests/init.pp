@@ -3,6 +3,7 @@
 class programming {
 	include programming::git
 	include programming::python
+	include programming::python::django
 	include programming::c
 	include programming::misc
 	include programming::flickr
@@ -26,6 +27,10 @@ class programming::python {
 	# Python stuff
 	package { "ipython": ensure => installed }
 	package { "wxPython": ensure => installed }
+}
+
+class programming::python::django {
+	package { "Django": ensure => installed }
 }
 
 class programming::c {
