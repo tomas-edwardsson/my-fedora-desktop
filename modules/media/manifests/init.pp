@@ -12,7 +12,7 @@ class media::screencapture {
 }
 
 class media::photo::misc {
-	package { "exiftags": ensure => installed }
+	#package { "exiftags": ensure => installed }
 }
 
 class media::audiorip {
