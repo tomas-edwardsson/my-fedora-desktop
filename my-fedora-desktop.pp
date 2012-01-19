@@ -1,6 +1,8 @@
 
 $cups_poll_servers = ['cups.ok.is']
 
+include auth::kerberos
+
 if ($cups_poll_servers) {
         include cups
 }
