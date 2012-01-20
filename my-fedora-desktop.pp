@@ -43,4 +43,4 @@ include virtualization
 include bootdisk
 include fedorapkgr
 
-
+include rhev::spice
