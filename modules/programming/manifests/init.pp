@@ -8,6 +8,7 @@ class programming {
 	include programming::misc
 	include programming::flickr
 	include programming::rpmbuild
+	include programming::eclipse
 }
 
 class programming::rpmbuild {
@@ -42,4 +43,14 @@ class programming::flickr {
 	package { "glib2-devel": ensure => installed }
 	package { "flickcurl": ensure => installed }
 	package { "flickcurl-devel": ensure => installed }
+}
+
+
+class programming::eclipse {
+	package { "eclipse-egit": ensure => installed }
+	package { "eclipse-setools": ensure => installed }
+	package { "eclipse-systemtapgui": ensure => installed }
+	package { "eclipse-pydev": ensure => installed }
+	package { "eclipse-oprofile": ensure => installed }
+	package { "eclipse-rpm-editor": ensure => installed }
 }
