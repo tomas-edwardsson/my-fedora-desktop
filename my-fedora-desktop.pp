@@ -1,5 +1,5 @@
 
-$cups_poll_servers = ['cups.ok.is']
+$cups_poll_servers = ['cups.ok.is', 'skvetta.os.is']
 
 include auth::kerberos
 
