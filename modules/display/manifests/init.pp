@@ -22,4 +22,8 @@ class display::nvidia {
 		command => "/usr/sbin/nvidia-xconfig",
 		refreshonly => true,
 	}
+
+	# For Wine we need 32 bit
+	package { "xorg-x11-drv-nvidia-libs.i686":
+		ensure => installed }
 }

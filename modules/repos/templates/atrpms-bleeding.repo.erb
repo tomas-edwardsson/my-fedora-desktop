@@ -1,0 +1,23 @@
+[atrpms-bleeding]
+name=Fedora $releasever - $basearch - ATrpms bleeding
+failovermethod=priority
+baseurl=http://dl.atrpms.net/f$releasever-$basearch/atrpms/bleeding
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms
+
+[atrpms-bleeding-debuginfo]
+name=Fedora $releasever - $basearch - ATrpms bleeding - Debug
+failovermethod=priority
+baseurl=http://dl.atrpms.net/debug/f$releasever-$basearch/atrpms/bleeding
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms
+
+[atrpms-bleeding-source]
+name=Fedora $releasever - $basearch - ATrpms bleeding - Source
+failovermethod=priority
+baseurl=http://dl.atrpms.net/src/f$releasever-$basearch/atrpms/bleeding
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms

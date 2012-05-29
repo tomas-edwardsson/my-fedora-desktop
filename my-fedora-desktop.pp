@@ -1,7 +1,7 @@
 
 $cups_poll_servers = ['cups.ok.is', 'skvetta.os.is']
 
-include auth::kerberos
+#include auth::kerberos
 
 if ($cups_poll_servers) {
         include cups
@@ -44,3 +44,6 @@ include bootdisk
 include fedorapkgr
 
 include rhev::spice
+include wine
+
+$gnome3::pkgs += "Boing"

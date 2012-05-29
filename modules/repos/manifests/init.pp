@@ -10,17 +10,12 @@ class repos {
 		creates => '/etc/yum.repos.d/rpmfusion-nonfree.repo',
 	}
 
-	# Use ATRPMS solely for DVD playback
-	exec { "install-atrpms":
-		command => '/usr/bin/yum -y install http://dl.atrpms.net/all/atrpms-repo-16-4.fc16.x86_64.rpm',
-		creates => '/etc/yum.repos.d/atrpms.repo',
-	}
-	augeas{"atrpms-decss-only" :
-  		context => "/files/etc/yum.repos.d/atrpms.repo/atrpms",
-  		changes => ["set includepkgs libdvdcss*", "set metadata_expire 7d" ],
-		onlyif => ["get includepkgs != libdvdcss*", "get metadata_expire != 7d" ],
-		subscribe => Exec['install-atrpms'],
-	}
+	#augeas{"atrpms-decss-only" :
+  		#context => "/files/etc/yum.repos.d/atrpms.repo/atrpms",
+  		#changes => ["set includepkgs libdvdcss*", "set metadata_expire 7d" ],
+		#onlyif => ["get includepkgs != libdvdcss*", "get metadata_expire != 7d" ],
+		#subscribe => Exec['install-atrpms'],
+	#}
 
 	# Flash
 	exec { "install-adobe-linux":
@@ -31,4 +26,26 @@ class repos {
 	# Find a closeby mirror
 	package { "yum-plugin-fastestmirror": ensure => installed }
 	package { "yum-plugin-downloadonly": ensure => installed }
+}
+
+class repos::atrpms {
+
+	# Use ATRPMS solely for DVD playback
+	file { '/etc/yum.repos.d/atrpms-bleeding.repo':
+		ensure => present,
+		content => template('repos/atrpms-bleeding.repo.erb'),
+	}
+	file { '/etc/yum.repos.d/atrpms.repo':
+		ensure => present,
+		content => template('repos/atrpms.repo.erb'),
+	}
+	file { '/etc/yum.repos.d/atrpms-testing.repo':
+		ensure => present,
+		content => template('repos/atrpms-testing.repo.erb'),
+	}
+
+	file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms':
+		ensure => present,
+		source => 'puppet:///repos/RPM-GPG-KEY-atrpms',
+	}
 }
