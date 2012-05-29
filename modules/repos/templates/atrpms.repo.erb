@@ -1,0 +1,25 @@
+[atrpms]
+name=Fedora $releasever - $basearch - ATrpms
+failovermethod=priority
+baseurl=http://dl.atrpms.net/f$releasever-$basearch/atrpms/stable
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms
+includepkgs=libdvdcss*
+metadata_expire=7d
+
+[atrpms-debuginfo]
+name=Fedora $releasever - $basearch - ATrpms - Debug
+failovermethod=priority
+baseurl=http://dl.atrpms.net/debug/f$releasever-$basearch/atrpms/stable
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms
+
+[atrpms-source]
+name=Fedora $releasever - $basearch - ATrpms - Source
+failovermethod=priority
+baseurl=http://dl.atrpms.net/src/f$releasever-$basearch/atrpms/stable
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms

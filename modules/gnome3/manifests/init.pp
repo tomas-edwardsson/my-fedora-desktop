@@ -1,6 +1,7 @@
 
 
 class gnome3 {
+	#$pkgs += [ 'gnome-tweak-tool' ]
 	# Some extra configurables for gnome-shell
-	package { "gnome-tweak-tool": ensure => installed }
+	#package { $pkgs: ensure => installed }
 }

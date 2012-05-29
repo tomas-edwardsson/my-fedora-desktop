@@ -1,7 +1,7 @@
 
 
 class programming {
-	include programming::git
+	include programming::vcs
 	include programming::python
 	include programming::python::django
 	include programming::c
@@ -19,9 +19,10 @@ class programming::misc {
 	package { "fuse-devel": ensure => installed }
 }
 
-class programming::git {
+class programming::vcs {
 	package { "git": ensure => installed }
 	package { "subversion": ensure => installed }
+	package { "cvs": ensure => installed }
 }
 
 class programming::python {
