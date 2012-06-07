@@ -46,6 +46,6 @@ class repos::atrpms {
 
 	file { '/etc/pki/rpm-gpg/RPM-GPG-KEY-atrpms':
 		ensure => present,
-		source => 'puppet:///repos/RPM-GPG-KEY-atrpms',
+		source => 'puppet:///modules/repos/RPM-GPG-KEY-atrpms',
 	}
 }
