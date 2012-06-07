@@ -47,5 +47,8 @@ include wine
 # Puppet development tools (puppet-module-tool)
 include puppet::devel
 
+# Disable multicastdns, makes .local slow/disfunctional
+include nss::nomdns
+
 $gnome3::pkgs += "Boing"
 
