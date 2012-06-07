@@ -49,7 +49,6 @@ class programming::flickr {
 
 class programming::eclipse {
 	package { "eclipse-egit": ensure => installed }
-	package { "eclipse-setools": ensure => installed }
 	package { "eclipse-systemtapgui": ensure => installed }
 	package { "eclipse-pydev": ensure => installed }
 	package { "eclipse-oprofile": ensure => installed }

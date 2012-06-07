@@ -44,5 +44,8 @@ include fedorapkgr
 include rhev::spice
 include wine
 
+# Puppet development tools (puppet-module-tool)
+include puppet::devel
+
 $gnome3::pkgs += "Boing"
 
