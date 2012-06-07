@@ -10,8 +10,8 @@ include autofs
 # Install various repos
 include repos
 
-# I use NVidia cards
-include display::nvidia
+# I use NVidia cards, not needed, nouveou now works!
+#include display::nvidia
 
 # Chat programs, xchat, pidgin
 include chat
