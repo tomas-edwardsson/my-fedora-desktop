@@ -50,5 +50,7 @@ include puppet::devel
 # Disable multicastdns, makes .local slow/disfunctional
 include nss::nomdns
 
+include ssh::server
+
 $gnome3::pkgs += "Boing"
 
